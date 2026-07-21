@@ -206,6 +206,48 @@ h1 {
   }
 }
 
+
+/* colored pdf */
+.downloads-block a[href$='.pdf'][icon="green"]::after {
+    background-image: url("../imgs/file_icons/pdf_grn.png");
+}
+.downloads-block a[href$='.pdf'][icon="orange"]::after {
+    background-image: url("../imgs/file_icons/pdf_orn.png");
+}
+.downloads-block a[href$='.pdf'][icon="purple"]::after {
+    background-image: url("../imgs/file_icons/pdf_ppl.png");
+}
+.downloads-block a[href$='.pdf'][icon="bw"]::after {
+    background-image: url("../imgs/file_icons/pdf_bw.png");
+}
+
+.downloads-block a.big {
+    font-size: 20px;
+    min-height: 2em;
+    padding-left: 3em;
+    padding-right: 1em;
+
+    display: flex;
+    align-items: center;
+}
+.downloads-block a.big::after {
+    width: 42px;
+    height: 42px;
+    display: block;
+}
+
+.downloads-block.open {
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+
+    gap: .5em;
+}
+.downloads-block.open a {
+    box-shadow: none;
+    width: 100%;
+}
 </style>
 </head>
 <body>
@@ -228,12 +270,12 @@ h1 {
     <p>
       Theoretical physicist, CG artist, and software developer. I enjoy breaking down complex topics into accessible, intuitive ideas and care deeply about visual clarity in communication. Always happy to help people learn new concepts and skills.
     </p>
-    <fieldset class="downloads-block todo">
-      <legend>Downloads</legend>
-      <a class="dwld" href="PDFs/.pdf" download="CV_Efimov (academic).pdf">CV_Academic.pdf</a>
-      <a class="dwld" href="PDFs/.pdf" download="CV_Efimov (software).pdf">CV_Software.pdf</a>
-      <a class="dwld off" href="PDFs/.pdf" download="CV_Efimov (graphics).pdf">CV_CG.pdf</a>
-      <a class="dwld" href="PDFs/2026-full.pdf" download="CV_Efimov (full).pdf">CV_full.pdf</a>
+    <fieldset class="downloads-block open">
+      <a class="dwld big" icon="purple" href="PDFs/CV Efimov (Academia/Research).pdf">Academia/Research</a>
+      <a class="dwld big" icon="green" href="PDFs/Resume Efimov (SWE).pdf">Software 
+Development</a>
+      <a class="dwld big" icon="orange" href="PDFs/Resume Efimov (CG).pdf">Computer Graphics</a>
+      <a class="dwld big" style="margin-top: 1em;" icon="bw" href="PDFs/CV Efimov.pdf">Full Resume</a>
     </fieldset>
   </div>
 </div>
